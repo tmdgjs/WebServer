@@ -1,0 +1,11 @@
+.column{
+    display: flex !important; 
+    align-items: center;
+
+}
+
+.menu{
+    margin : 0 5px !important;
+}
+
+

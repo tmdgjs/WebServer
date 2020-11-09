@@ -1,0 +1,91 @@
+body{
+    margin : 0;
+    padding : 0;
+    width : 100vw;
+    height : 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.signup {
+    width: 25vw;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+.signup > div > input{
+    margin : .5em 0 !important;
+}
+
+.signup__id-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.signup__id-container > div{
+    width : 80%;
+}
+
+.signup__id-container > div > input{
+    width : 50%;
+    
+    margin : .5em 0 !important;
+}
+
+.signup__input-container{
+    width : 100%;
+}
+
+.signup__email-container{
+    width : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin : .5em 0 ;
+}
+
+.signup__email-container > div{
+    width : 40%;
+    
+}
+
+.signup__footer{
+
+    margin-top : 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup__footer-text{
+    color: #424242;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.signup__footer-text-login{
+    text-decoration: underline;
+    font-weight: 700;
+    padding-left: 10px;
+    
+    color: #424242;
+}
+
+.signup__footer-text-login:hover{
+    opacity: .7;
+    
+    color: #424242;
+}
+
+
