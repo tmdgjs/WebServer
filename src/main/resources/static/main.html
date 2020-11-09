@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="./semanticUI/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="./semanticUI/semantic.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/reviseSemantic.css"/>
+    <link rel="stylesheet" href="css/mainswitch.css"/>
+    <title>D-Book</title>
+    <link rel="icon" href="img/icon.png">
+    <script src="./js/main.js" ></script>
+</head>
+<body>
+    <div class="main">
+        <header class="main__header-container">
+            <ul class="main__header-menu ui grid">
+                <li class="nine wide column">D-Book</li>
+                <li class="seven wide column main__header-menu">    
+                    <div class="main__header-menu-search ui action input ">
+                        <input id="search_txt" type="text" placeholder="SEARCH">
+                        <button id="btn_search" class="ui icon button" onclick="searchEBook()">
+                            <i class="search icon"></i>
+                        </button>
+                    </div>
+                    <div class="ui icon menu">
+                        <a class="item" title="책 업로드" href="upload">
+                            <i class="book icon" ></i>
+                        </a>
+                        <a class="item" title="로그아웃" href="/mains/logouts">
+                            <i class="sign out alternate icon" ></i>
+                        </a>
+                        <!--a class="item" title="설정" href="setting">
+                            <i class="cog icon" ></i>
+                        </a-->
+                    </div> 
+                </li>
+            </ul>
+        </header>
+
+        <section class="main__content-container">
+            <div class="main__content-sidebar ui secondary vertical menu">
+                <a class="item">
+                    <h4 class="ui header" onclick="myLibraryList()">My Library</h4>
+                </a>
+                <a class="item">
+                    <h4 class="ui header" onclick="sharedBookList()">Shared</h4>
+                </a>
+            </div>
+
+            <main class="main__content-booklist">
+                <ul id="main__content-ul"></ul>
+            </main>
+        </section>
+    </div>
+
+    <div id="book__info-dialog"class="ui modal">
+        <div class="header">책 정보</div>
+        <div class="image content">
+            <div class="ui medium image">
+                <img class="book-shadow book__info-image" id="book__info-poster" src="./img/1234.PNG">
+            </div>
+            <div class="description">
+                <div class="book__info-header"> 
+                    <h3 class="ui huge header" id="book__info-title"></h3>
+                    <h5 class="ui header book__info-sub-header" id="book__info-subtitle"></h5>
+                </div>
+                <p class="book__info-font"><i class="pencil alternate icon" title="작가"></i><span id="book__info-author"></span></p>
+                <p class="book__info-font"><i class="tag icon" title="장르"></i><span id="book__info-category"></span></p>
+                <p class="book__info-font"><i class="calendar times icon" title="업로드 일"></i><span id="book__info-created"></span></p>
+                <p class="book__info-font"><i class="user icon" title="업로더"></i><span id="book__info-uploader"></span></p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="loading__container" class="ui active inline loader" style="display: none"></div>
+</body>
+</html>

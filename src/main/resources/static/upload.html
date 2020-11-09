@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Book</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="./semanticUI/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="./semanticUI/semantic.min.js"></script>
+    <script src="./js/upload.js" ></script>
+</head>
+<body>
+    <div class="upload">
+        <header  class="upload__header">
+            <h3 onclick="goMain()">D-Book</h3>
+        </header>
+
+        <div class="upload__content-container">
+            <div  class="upload__content-header">  
+                <h3>Book Upload</h3>
+            </div>
+
+            <div class="upload__content">
+                <div class="ui action input upload-book-input-wrap">
+                    <input id="upload__input-book" onclick="fileOpen(this)" type="text" placeholder="Choose Book" readonly>
+                    <input type="file" onchange="fileChange(this)" accept=".epub" id="file-book">
+                    <div class="ui icon button">
+                        <i class="save icon"></i>
+                    </div>
+                </div>
+
+                <div class="ui action input upload-book-input">
+                    <input id="upload__input-poster" onclick="fileOpen(this)" type="text" placeholder="POSTER" readonly>
+                    <input type="file" onchange="fileChange(this)" accept=".jpg, .jpeg, .png" id="file-poster">
+                    <div class="ui icon button">
+                        <i class="save icon"></i>
+                    </div>
+                </div>
+
+                <div class="ui input upload-book-input">
+                    <input id="book_title" type="text" placeholder="TITLE">
+                </div>
+
+                <div class="ui input upload-book-input">
+                    <input id="book_subtitle" type="text" placeholder="SUB TITLE">
+                </div>
+
+                <div class="ui input upload-book-input">
+                    <input id="book_author" type="text" placeholder="AUTHOR">
+                </div>
+
+                <select id="book_category" class="ui dropdown upload-book-input">
+                    <option value="">CATEGORY</option>
+                </select>
+
+                <h3 class="ui header">Share ?</h3>
+                <div class="toggle-radio">
+                    <input type="radio" name="rdo" id="yes" checked>
+                    <input type="radio" name="rdo" id="no">
+                    <div class="switch">
+                        <label for="yes">Yes</label>
+                        <label for="no">No</label>
+                        <span></span>
+                    </div>
+                </div>
+
+                <button class="ui button inverted red upload-book-button" id="upload__button" onclick="eBookUpload()">Upload</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading__container" class="ui active inline loader" style="display: none"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body{
+    padding: 10% 30%;
+}
+
+table{
+    border-top: 3px solid black;
+}
+
+h2{
+    display: inline;
+}
+
+h6{
+    display: inline;
+}
+
+#head{
+    padding: 25px 0px;
+}
+td{
+    height: 50px;
+    border-bottom: 2px solid rgb(235, 231, 231);
+}
+
+#a{
+    width: 100px;
+}

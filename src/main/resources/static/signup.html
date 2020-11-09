@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Book | 회원가입</title>
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="./semanticUI/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="./semanticUI/semantic.min.js"></script>
+    <script src="./js/signup.js" ></script>
+</head>
+<body>
+    <div class="signup">
+        <h2 class="ui header">회원가입</h2>
+
+
+        <div class="signup__email-container ">
+            <div class="ui input">
+                <input type="text" id="signup__email" placeholder="이메일">
+            </div>
+            <span style="font-weight: bold">@</span>
+            <select id="signup__email-selectbox" class="ui dropdown">
+                <option  value="">Email</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="naver.com">naver.com</option>
+            </select>
+
+        </div>
+        
+
+        <div class="ui input signup__input-container">
+            <input id="signup__password" type="password" placeholder="비밀번호 (8자 ~ 16자)">
+        </div>
+
+        <div class="ui input signup__input-container">
+            <input id="signup__password-check" type="password" placeholder="비밀번호 확인">
+        </div>
+
+        <div class="ui input signup__input-container">
+            <input id="signup__name" type="text" placeholder="이름">
+        </div>
+
+          
+        <div class="signup__email-container" id="signup__email-authcode-container" hidden>
+            <div class="ui input">
+                <input type="text" id="signup__email-authcode" placeholder="인증 코드">
+                <input type="hidden" id="signup__email-authcode-hidden"/>
+            </div>
+            
+            <button id="signup__email-authcode-button" class="ui black button" onclick="emailCheck()">확인</button>
+        </div>
+        
+        <div class="signup__footer">
+            <button class="submit-btn ui black button" onclick="signup()" id="signup__button">회원가입</button>
+            <div class="signup__footer-text">이미 아이디가 있으신가요?
+                <a href="login" class="signup__footer-text-login">로그인</a>
+            </div>
+        </div>
+    </div>
+    <div id="loading__container" class="ui active inline loader" style="display: none"></div>
+</body>
+</html>

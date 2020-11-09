@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    padding : 0;
+}
+.ui.action.input input[type="file"] {
+    display: none;
+    width : 100%;
+}
+.upload{
+    width : 100vw;
+    height : 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload__header{
+    width : 65vw;
+    height : 10vh;
+    
+    display: flex;
+    align-items: center;
+    
+}
+.upload__header > h3 {
+    font-size: 18px;
+    color: rgba(0,0,0,.87);
+    cursor: pointer;
+}
+.upload__content-container{
+    width : 25vw;
+    height : 50vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+.upload__content-header{
+    height : 15%;
+
+    box-sizing: border-box;
+    border-bottom: 1px solid #E4E4E4;
+
+    display: flex;
+    align-items: center;
+}
+.upload__content-header > h3{
+    font-size: 18px;
+    color: rgba(0,0,0,.87);
+
+    padding : 10px 0;
+}
+.upload__content{
+    padding : 1rem;
+
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+    
+}
+.upload-book-input-wrap{
+    width: 100%;
+    margin-bottom : 3rem; 
+}
+
+.upload-book-input{
+    width : 100%;
+    margin : 1rem 0 ;
+}
+.upload-book-button{
+     width : 50%;
+    margin : 20px 0 !important;
+}
