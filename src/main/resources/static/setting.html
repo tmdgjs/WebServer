@@ -4,59 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-Book | 설정</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="./semanticUI/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="./semanticUI/semantic.min.js"></script>
     <link rel="stylesheet" href="css/setting.css">
 </head>
-<script>
-    function goBack() {
-        location.href='/'
-    }
-</script>
 
 <body>
-<header id="head">
-    <h2>개인정보 변경</h2>
-    <h6>고객님의 개인정보보호를 위해 최선을 다하겠습니다</h6><br>
+
+<header  class="setting_header">
+    <h3>D-Book</h3>
 </header>
-<table>
-    <tr>
-        <td id="a">
-            넥슨ID
-        </td>
-        <td>
-            mrkimdh03@gmail.com
-            <input type="button" value="넥슨ID변경"><br>
-        </td>
-    </tr>
-    <tr>
-        <td id="a">
-            이름
-        </td>
-        <td>
-            <span>김*현</span>
-            <input type="button" value="개명"><br>
-        </td>
-    </tr>
-    <tr>
-        <td id="a">
-            닉네임
-        </td>
-        <td>
-            <input type="text" value="도몽03">
-            <input type="button" value="변경"><br>
-        </td>
-    </tr>
-    <tr>
-        <td id="a">
-            휴대폰
-        </td>
-        <td>
-            등록된 정보 없음
-            <input type="button" value="등록"><br>
-        </td>
-    </tr>
-</table>
 
-<button class="setting__return-btn" onclick="goBack()">돌아가기</button>
+<div class="setting_content-container">
+    <div  class="setting_content-header">
+        <h3>개인정보 수정</h3>
+    </div>
 
+    <div class="setting_profile">
+        <i class="massive user circle icon"></i> 닉네임 <button class="ui button">수정</button>
+    </div>
+
+    <!-- <div class="ui segment setting_book-count">
+        <div id="setting_book-count-mylibrary">내 서재 <h4 class="setting_book-count-num">30</h4></div>
+        <div id="setting_book-count-upload">업로드 <h4 class="setting_book-count-num">30</h4></div>
+    </div> -->
+
+    <!-- <table class="ui definition table" id="setting_book-count">
+        <tbody>
+            <tr>
+                <td id="setting_book-count-mylibrary" class="setting_profile-list">내 서재</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td id="setting_book-count-upload" class="setting_profile-list">업로드</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <table id="setting_book-count" class="ui very basic table">
+        <thead>
+        <tr>
+            <th>내 서재</th>
+            <th>업로드</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>30</td>
+            <td>30</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="ui definition table" id="setting_profile-table">
+        <tbody>
+        <tr>
+            <td class="setting_profile-list">이메일</td>
+            <td>mrkimdh03@gmail.com</td>
+        </tr>
+        <tr>
+            <td class="setting_profile-list">비밀번호</td>
+            <td><button class="ui button">변경</button></td>
+        </tr>
+        <tr>
+            <td class="setting_profile-list">이름</td>
+            <td>김*현</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--
+    <div class="upload__content-container">
+        <div  class="upload__content-header">
+            <h3>개인정보 수정</h3>
+        </div>
+
+            <div class="ui input upload-book-input">
+                <input id="book_title" type="text" placeholder="EMAIL">
+            </div>
+
+            <div class="ui input upload-book-input">
+                <input id="book_title" type="text" placeholder="PASSWORD">
+            </div>
+
+            <div class="ui input upload-book-input">
+                <input id="book_author" type="text" placeholder="NAME">
+            </div>
+
+            <button class="ui button inverted red upload-book-button" id="upload__button">수정</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="loading__container" class="ui active inline loader" style="display: none"></div>
+    -->
+</div>
 </body>
 </html>

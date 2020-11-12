@@ -5,7 +5,7 @@
     <title>D-Book</title>
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="./semanticUI/semantic.min.css">
     <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -17,13 +17,13 @@
 <body>
     <section class="login">
         <header>
-            D-Book
+            <img  src="./img/main.png"/>
         </header>
         <ul>
             <li><input id="login__id" type="text" placeholder="ID" title="아이디"></li>
             <li><input id="login__pw" type="password" placeholder="PW" title="비밀번호"></li>
-            <li><button id="login__button" onclick="login()">로그인</button></li>
-            <li><button id="login__go-signup-button" onclick="gosignup()">회원가입</button></li>
+            <li><button id="login__button" class="ui button" onclick="login()">로그인</button></li>
+            <li><button id="login__go-signup-button" class="ui button" onclick="gosignup()">회원가입</button></li>
         </ul>
     </section>
     

@@ -125,7 +125,7 @@ async function eBookInfoUpload(ebookID){
     let ebook = {
         ebookId         : ebookID,
         ebookTitle      : $("#book_title").val(),
-        ebookSubTitle   : $("#book_subtitle").val(),
+        ebookSubTitle   : $("#book_content").val(),
         categoryId         : $("#book_category").val(),
         ebookAuthor     : $("#book_author").val(),
         isShared        : isShared

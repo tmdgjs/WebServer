@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-Book</title>
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/upload.css">
     <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/loading.css">
@@ -48,9 +48,15 @@
                     <input id="book_title" type="text" placeholder="TITLE">
                 </div>
 
-                <div class="ui input upload-book-input">
-                    <input id="book_subtitle" type="text" placeholder="SUB TITLE">
+                <div class="ui form upload-book-input">
+                    <div style="resize:none">
+                        <textarea id="book_content" placeholder="CONTENT"></textarea>
+                    </div>
                 </div>
+
+                <!--div class="ui input upload-book-input">
+                    <input id="book_subtitle" type="text" placeholder="SUB TITLE">
+                </div-->
 
                 <div class="ui input upload-book-input">
                     <input id="book_author" type="text" placeholder="AUTHOR">
