@@ -1,5 +1,6 @@
 $(document).ready(() => {
     $('.ui.dropdown').dropdown()
+    $("#example1").calendar();
     getCategoryList();
 
 })
@@ -128,7 +129,9 @@ async function eBookInfoUpload(ebookID){
         ebookSubTitle   : $("#book_content").val(),
         categoryId         : $("#book_category").val(),
         ebookAuthor     : $("#book_author").val(),
-        isShared        : isShared
+        isShared        : isShared,
+        ebookPublisher  : $("#book_publisher").val(),
+        ebookPublisherDate : new Date($("#book_publishDate").val())
     }
 
     await $.ajax({

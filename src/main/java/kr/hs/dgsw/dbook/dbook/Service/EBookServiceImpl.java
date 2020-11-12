@@ -58,7 +58,7 @@ public class EBookServiceImpl implements EBookService{
         try{
 
             if(eBookCategoryId == null){
-                throw new EBookException("장르 정보가 없습니다.");
+                throw new EBookException("카테고리 정보가 없습니다.");
             }
 
             for(String str : ebookList){
@@ -218,6 +218,8 @@ public class EBookServiceImpl implements EBookService{
     }
 
     public List<String> listAdd(EBook eBook){
+
+        System.out.println(eBook);
 
         List<String> ebookList = new ArrayList<>();
         ebookList.add(eBook.getEbookTitle());

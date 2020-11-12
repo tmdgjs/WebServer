@@ -48,6 +48,11 @@ public class EBook {
     String ebookFilePath;
 
     String ebookPosterPath;
+
+    String ebookPublisher;
+
+    LocalDateTime ebookPublisherDate;
+
     //String ebookPreview;
 
 }

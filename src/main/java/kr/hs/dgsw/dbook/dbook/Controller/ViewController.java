@@ -88,7 +88,7 @@ public class ViewController {
         return modelAndView;
     }
 
-    @GetMapping("/setting")
+    @GetMapping("/mypage")
     public ModelAndView settingPage(HttpServletResponse response,  HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
 
@@ -103,7 +103,7 @@ public class ViewController {
             return modelAndView;
         }
 */
-        modelAndView.setViewName("/setting.html");
+        modelAndView.setViewName("/mypage.html");
         return modelAndView;
     }
 

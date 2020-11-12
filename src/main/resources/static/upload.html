@@ -15,11 +15,14 @@
             crossorigin="anonymous"></script>
     <script src="./semanticUI/semantic.min.js"></script>
     <script src="./js/upload.js" ></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 </head>
 <body>
     <div class="upload">
-        <header  class="upload__header">
-            <h3 onclick="goMain()">D-Book</h3>
+        <header class="upload__header">
+            <h3 onclick="location.href = '/';">
+                <img style="height:5vh" src="./img/main.png"/>
+            </h3>
         </header>
 
         <div class="upload__content-container">
@@ -49,9 +52,7 @@
                 </div>
 
                 <div class="ui form upload-book-input">
-                    <div style="resize:none">
-                        <textarea id="book_content" placeholder="CONTENT"></textarea>
-                    </div>
+                    <textarea style="resize:none" id="book_content" placeholder="CONTENT"></textarea>
                 </div>
 
                 <!--div class="ui input upload-book-input">
@@ -65,6 +66,17 @@
                 <select id="book_category" class="ui dropdown upload-book-input">
                     <option value="">CATEGORY</option>
                 </select>
+
+                <div class="ui input upload-book-input">
+                    <input id="book_publisher" type="text" placeholder="PUBLISHER">
+                </div>
+
+                <div class="ui calendar upload-book-input" id="example1">
+                    <div class="ui input left icon" style="width:100%">
+                        <i class="calendar icon"></i>
+                        <input type="text" id="book_publishDate" placeholder="Date/Time">
+                    </div>
+                </div>
 
                 <h3 class="ui header">Share ?</h3>
                 <div class="toggle-radio">
