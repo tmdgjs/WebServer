@@ -33,18 +33,6 @@ public class EBook {
 
     Boolean isShared;
 
-    @Lob
-    byte[] ebookFile;
-
-    String ebookFileName;
-
-    String ebookFileType;
-
-    @Lob
-    byte[] ebookCover;
-
-    String ebookCoverType;
-
     String ebookFilePath;
 
     String ebookPosterPath;

@@ -38,9 +38,9 @@ public class EBookServiceImpl implements EBookService{
         String tokenOwnerID = tokenResponse.getTokenOwnerId();
         EBook objEBook = fileSave(file, tokenOwnerID);
 
-        /*if(objEBook.getEbookFilePath().equals("") || objEBook.getEbookPosterPath().equals("")){
+        if(objEBook.getEbookFilePath().equals("") || objEBook.getEbookPosterPath().equals("")){
             return new EBookResponse("업로드 에러");
-        }*/
+        }
 
         eBookRepository.save(objEBook);
 
@@ -80,6 +80,8 @@ public class EBookServiceImpl implements EBookService{
                 found.setEbookAuthor(eBook.getEbookAuthor());
                 found.setCategoryId(eBookCategoryId);
                 found.setIsShared(Optional.ofNullable(eBook.getIsShared()).orElseThrow(()-> new EBookException("공유 정보가 없습니다.")));
+                found.setEbookPublisher(eBook.getEbookPublisher());
+                found.setEbookPublisherDate(eBook.getEbookPublisherDate());
 
                 return this.eBookRepository.save(found);
 
@@ -170,28 +172,25 @@ public class EBookServiceImpl implements EBookService{
             objEBook.setEbookUploader(tokenOwnerID);
 
             //0 : epub, 1 : poster
+            String eBookFilePath = ebookFilePath(file.get(0));
 
-            objEBook.setEbookFile(file.get(0).getBytes());
-            objEBook.setEbookCover(file.get(1).getBytes());
-            objEBook.setEbookFileName(file.get(0).getOriginalFilename());
-            objEBook.setEbookFileType(file.get(0).getContentType());
-            objEBook.setEbookCoverType(file.get(1).getContentType());
+            objEBook.setEbookFilePath(eBookFilePath.substring(2));
 
-            /*String posterOriginalfileName;
+            String posterOriginalfileName;
             File saveFile;
 
             if(file.size() == 2) {
                 UUID uuid = UUID.randomUUID();
 
                 posterOriginalfileName = file.get(1).getOriginalFilename();
-                //saveFile = new File(System.getProperty("user.dir") + "/upload" + "/poster/" + uuid.toString() + "_" + posterOriginalfileName);
-                //file.get(1).transferTo(saveFile);
-                //objEBook.setEbookPosterPath(saveFile.toString().substring(2));
+                saveFile = new File(System.getProperty("user.dir") + "/upload" + "/poster/" + uuid.toString() + "_" + posterOriginalfileName);
+                file.get(1).transferTo(saveFile);
+                objEBook.setEbookPosterPath(saveFile.toString().substring(2));
 
             } else{
                 posterOriginalfileName = System.getProperty("user.dir") + "/upload" + "/unknown/unknownposter.jpg";
                 objEBook.setEbookPosterPath(posterOriginalfileName.substring(2));
-            }*/
+            }
 
             return objEBook;
         } catch (IOException e) {

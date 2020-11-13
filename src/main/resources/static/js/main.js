@@ -215,7 +215,7 @@ function myLibraryListData(data) {
     $("#book__info-subtitle").html(data.ebook.ebookSubTitle)
     $("#book__info-author").html(data.ebook.ebookAuthor)
     $("#book__info-category").html(data.category)
-    $("#book__info-uploader").html(data.ebook.ebookUploader)
+    $("#book__info-uploader").html(data.ebook.ebookPublisherDate)
     $("#book__info-created").html(formatDate(data.ebook.ebookCreated))
  }
 
