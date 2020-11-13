@@ -46,7 +46,11 @@
             <input id="signup__name" type="text" placeholder="이름">
         </div>
 
-          
+        <div class="ui input signup__input-container">
+            <input id="signup__profile-image" onclick="fileOpen(this)" type="text" placeholder="PROFILE IMAGE" readonly>
+            <input type="file" onchange="fileChange(this)" accept=".jpg, .jpeg, .png" id="profileImg" hidden>
+        </div>
+
         <div class="signup__email-container" id="signup__email-authcode-container" hidden>
             <div class="ui input">
                 <input type="text" id="signup__email-authcode" placeholder="인증 코드">

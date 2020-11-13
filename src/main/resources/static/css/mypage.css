@@ -3,7 +3,7 @@ body {
     height: 100%;
 
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     align-items: center;
 
 }
@@ -11,99 +11,60 @@ body {
 .setting_header{
     width : 65vw;
     height : 10vh;
+    display: flex;
+    align-items: center;
+}
 
+.mypage_profileimg-wrap {
+
+
+    width : 100%;
     display: flex;
     align-items: center;
 
 }
 
+.mypage_profileimg-wrap > img {
+
+    width : 128px;
+    height : 128px;
+    border-radius: 50%;
+
+}
+
+.mypage_profileimg-wrap > button {
+
+    margin-left : 50px !important;
+}
+
 .setting_content-container{
-    width : 55vw;
-    height : 50vh;
+    width : 65vw;
+    height : 70vh;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
+    justify-content : space-around;
 }
-
-.setting_content-header{
-    height : 15%;
-
-    box-sizing: border-box;
-    border-bottom: 1px solid #E4E4E4;
-
-    display: flex;
-    align-items: center;
-}
-
-.setting_profile {
-    width: 50%;
-    margin: 3% 0 0 0;
-}
-
-/* .setting_book-count {
-    border: 1px solid #E4E4E4;
-    width: 50%;
-    height: 900px;
-    margin: 3% 0 0 0;
-}
-
-#setting_book-count-mylibrary {
-    float: left;
-    border-right: medium solid #E4E4E4;
-    padding: 0 39.5% 0 0;
-}
-
-#setting_book-count-upload {
-    float: right;
-} */
 
 #setting_book-count {
     width: 45%;
     margin: 50px 0 0 0;
 }
 
-#setting_profile-table {
-    position: relative;
-    left: 48.9%;
-    bottom: 60%;
+.myPage_table{
 
     width: 50%;
-    height: 80%;
+    height: 40%;
     margin: 0 0 0 15px;
+
+}
+
+#setting_profile-table {
+
 }
 
 .setting_profile-list {
     width: 28%;
 }
 
-/*
-body{
-    padding: 10% 30%;
-}
-
-table{
-    border-top: 3px solid black;
-}
-
-h2{
-    display: inline;
-}
-
-h6{
-    display: inline;
-}
-
-#head{
-    padding: 25px 0px;
-}
-
-td{
-    height: 50px;
-    border-bottom: 2px solid rgb(235, 231, 231);
-}
-
-#a{
-    width: 100px;
-}
-*/

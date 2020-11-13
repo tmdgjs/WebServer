@@ -14,8 +14,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    String userId;
-
     @Column(nullable = false)
     String email;
 

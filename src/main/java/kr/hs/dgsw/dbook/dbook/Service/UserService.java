@@ -5,6 +5,7 @@ import kr.hs.dgsw.dbook.dbook.Json.SignUpResponse;
 import kr.hs.dgsw.dbook.dbook.Json.TokenResponse;
 import kr.hs.dgsw.dbook.dbook.VO.Token;
 import kr.hs.dgsw.dbook.dbook.VO.User;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -18,4 +19,6 @@ public interface UserService {
     TokenResponse tokenCheck(String token);
 
     String getToken(Cookie[] cookies);
+
+    LoginResponse fileUpload(MultipartFile files, Long userNo);
 }

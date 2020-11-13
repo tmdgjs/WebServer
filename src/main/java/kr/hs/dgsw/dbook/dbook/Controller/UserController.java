@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
@@ -41,5 +42,16 @@ public class UserController {
 
         return new ResponseEntity<>(loginResponse, HttpStatus.OK);
     }
+
+    @PostMapping("/uploads/images/{userNo}") // 이미지 업로드
+    public ResponseEntity<LoginResponse> fileUpload(@RequestPart("file") MultipartFile files, @PathVariable Long userNo){
+
+
+        LoginResponse loginResponse = userService.fileUpload(files, userNo);
+
+        return new ResponseEntity<>(loginResponse,HttpStatus.OK);
+    }
+
+
 
 }

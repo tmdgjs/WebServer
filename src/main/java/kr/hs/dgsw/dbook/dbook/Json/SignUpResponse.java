@@ -10,6 +10,8 @@ public class SignUpResponse {
 
     Integer code;
 
+    Long userNo;
+
     public SignUpResponse(){
         this.code = 0;
     }
@@ -18,4 +20,11 @@ public class SignUpResponse {
         this.message = message;
         this.code = 0;
     }
+
+    public SignUpResponse(Long userNo) {
+        this.userNo = userNo;
+        this.code = 0;
+    }
+
+
 }
