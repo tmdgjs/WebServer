@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Map;
 
 public interface LibraryService {
 
@@ -16,4 +17,5 @@ public interface LibraryService {
     ResponseEntity<Object> deleteLibraryBook(TokenResponse objToken, Long ebookid);
 
     LibraryResponse addLibraryBook(TokenResponse objToken, Long ebookid);
+
 }

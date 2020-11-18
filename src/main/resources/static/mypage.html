@@ -12,6 +12,8 @@
             crossorigin="anonymous"></script>
     <script src="./semanticUI/semantic.min.js"></script>
     <link rel="stylesheet" href="css/mypage.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="./js/mypage.js" ></script>
 </head>
 
 <body>
@@ -30,17 +32,17 @@
             <td class="setting_profile-list">프로필 사진</td>
             <td>
                 <div class="mypage_profileimg-wrap">
-                    <img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile7.uf.tistory.com%2Fimage%2F24283C3858F778CA2EFABE">
+                    <img id="myProfileImg" src="">
                 </div>
             </td>
         </tr>
         <tr>
             <td class="setting_profile-list">내 서재</td>
-            <td id="myLibraryBookCnt">30</td>
+            <td id="myLibraryBookCnt"></td>
         </tr>
         <tr>
             <td class="setting_profile-list">업로드 책</td>
-            <td id="myUploadBookCnt">30</td>
+            <td id="myUploadBookCnt"></td>
         </tr>
         </tbody>
     </table>
@@ -49,7 +51,7 @@
         <tbody>
         <tr>
             <td class="setting_profile-list">이메일</td>
-            <td id="myEmail">mrkimdh03@gmail.com</td>
+            <td id="myEmail"></td>
         </tr>
         <tr>
             <td class="setting_profile-list">비밀번호</td>
@@ -62,7 +64,7 @@
         </tr>
         <tr>
             <td class="setting_profile-list">이름</td>
-            <td id="myName">name</td>
+            <td id="myName"></td>
         </tr>
         </tbody>
     </table>
@@ -93,5 +95,6 @@
     <div id="loading__container" class="ui active inline loader" style="display: none"></div>
     -->
 </div>
+<div id="loading__container" class="ui active inline loader" style="display: none"></div>
 </body>
 </html>

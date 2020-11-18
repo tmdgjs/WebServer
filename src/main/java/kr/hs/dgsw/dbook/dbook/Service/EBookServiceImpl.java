@@ -218,8 +218,6 @@ public class EBookServiceImpl implements EBookService{
 
     public List<String> listAdd(EBook eBook){
 
-        System.out.println(eBook);
-
         List<String> ebookList = new ArrayList<>();
         ebookList.add(eBook.getEbookTitle());
         ebookList.add(eBook.getEbookAuthor());
