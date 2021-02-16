@@ -18,7 +18,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class MyWebAppConfiguration extends WebMvcConfigurerAdapter implements WebMvcConfigurer{
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/gitdbook/webserver/upload/**").addResourceLocations("file:/D:/gitDBook/WebServer/upload/");
+
+        /*
+        *  ex )  프로젝트 저장 경로 : D/dev/{PROJECT} 면
+        *        path = "/dev"
+        *        location = "/D:/dev"
+        * */
+
+        String path = "/dev";
+        String location = "D:/dev";
+
+        registry.addResourceHandler(path+ "/WebServer/upload/**").addResourceLocations("file:/"+ location +"v/WebServer/upload/");
     }
 
     private final ObjectMapper objectMapper;
