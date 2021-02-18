@@ -53,7 +53,7 @@ MyWebAppConfiguration 에서 프로젝트 경로를 설정해줍니다.
 String path = "/dev";
 String location = "D:/dev";
 
-registry.addResourceHandler(path+ "/WebServer/upload/**").addResourceLocations("file:/"+ location +"v/WebServer/upload/");
+registry.addResourceHandler(path+ "/WebServer/upload/**").addResourceLocations("file:/"+ location +"/WebServer/upload/");
 ```
 
 접속 시 웹 페이지를 확인하실 수 있습니다.
